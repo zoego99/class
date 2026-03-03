@@ -1,0 +1,241 @@
+/* =========================
+   全域設定
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: "Segoe UI", "Microsoft JhengHei", sans-serif;
+    background:#ffffff;
+    color:#333;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+}
+
+/* =========================
+   Navbar
+========================= */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    background:#ffffff;
+}
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:20px;
+    font-weight:500;
+    /* letter-spacing:3px; */
+}
+.logo img{
+    height:40px;      /* 控制高度 */
+    width:auto;       /* 寬度自動等比例 */
+    display:block;
+}
+
+.navbar nav a{
+    margin-left:30px;
+    text-decoration:none;
+    color:#555;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.navbar nav a:hover{
+    color:#4f46e5;
+}
+
+/* =========================
+   Landing 主區塊（滿版）
+========================= */
+
+.landing{
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 10%;
+}
+
+/* 左側品牌內容 */
+
+.landing-left{
+    max-width:520px;
+}
+
+.landing-left h1{
+    font-size:48px;
+    font-weight:700;
+    margin-bottom:20px;
+    line-height:1.2;
+    color:#27234a;
+    /* color:#2c2c2c; */
+}
+
+.landing-left p{
+    font-size:18px;
+    color:#555;
+    line-height:1.6;
+    margin-bottom:30px;
+}
+
+/* 講師資訊 */
+
+.instructor-info{
+    font-size:15px;
+    font-weight:500;
+}
+
+.instructor-info a{
+    text-decoration:none;
+    color:#4f46e5;
+    transition:0.3s;
+}
+
+.instructor-info a:hover{
+    opacity:0.7;
+}
+
+/* =========================
+   右側卡片區
+========================= */
+
+.landing-right{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+/* 卡片基本樣式 */
+
+.mini-card{
+    display:block;
+    width:260px;
+    padding:25px;
+    border-radius:18px;
+    text-decoration:none;
+    color:#333;
+    background:#f5f7fa;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+    transition:all 0.3s ease;
+}
+
+.mini-card:hover{
+    transform:translateX(6px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* 主題顏色 */
+
+.word{
+    background:#dde9fd;
+}
+
+.ppt{
+    background:#ffe4da;
+}
+
+.excel{
+    background:#dcf8e4;
+}
+
+.ai{
+    background:#fff8df;
+}
+
+.word h3{
+    color:#2b579a;
+}
+
+.ppt h3{
+    color:#d24726;
+}
+
+.excel h3{
+    color:#217346;
+}
+
+.ai h3{
+    color:#ecba05;
+}
+
+.mini-card h3{
+    font-size:20px;
+    margin-bottom:8px;
+}
+
+.mini-card p{
+    font-size:14px;
+    opacity:0.8;
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer{
+    text-align:center;
+    padding:15px;
+    font-size:13px;
+    background:#f7f7f7;
+    color:#777;
+}
+
+/* =========================
+   手機 RWD
+========================= */
+@media(max-width:768px){
+    .logo img{
+        height:30px;
+    }
+    .logo{
+        font-size:16px;
+    }
+}
+@media(max-width:900px){
+    
+
+.landing{
+    flex-direction:column;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.landing-left h1{
+    font-size:34px;
+}
+
+.landing-left p{
+    font-size:16px;
+}
+
+.landing-right{
+    margin-top:30px;
+    width:100%;
+    align-items:center;
+}
+
+.mini-card{
+    width:100%;
+    max-width:320px;
+}
+
+.navbar{
+    padding:15px 20px;
+}
+
+.navbar nav a{
+    margin-left:15px;
+    font-size:14px;
+}
+
+}
